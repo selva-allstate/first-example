@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Javascript</title>
+       <script>
+            function greetMe(){
+               // alert("Hello");
+               //console.log("Hello");
+               //console.log('Hello "Matt"');
+               const nameInput = document.getElementById("name");
+               //const nameInput = document.querySelector("#name");
+               const resultsDiv = document.getElementById("results");
+
+               const currentYear = new Date().getFullYear();
+               console.log(currentYear);
+
+               const yearInput = document.getElementById("year");
+               const age = currentYear - yearInput.value;
+               //resultsDiv.innerHTML = "Hello " + nameInput.value;
+               resultsDiv.innerHTML = `Hello ${nameInput.value}, you are probably`;
+               console.log("Age : ", age);
+               if (age === 21) {
+                  console.log("you are 21");
+               }
+               if (age !== 21){
+                  console.log("you are not 21");
+               }
+               if ("21" === age){
+                console.log("they are the same")
+               }
+               if (age == null){
+                console.log("age is null");
+               }
+               age +=10;
+               age++; //age = age + 1;
+               console.log("Next year you will be", age);
+               console.log("A year later you will be"+ ++age);
+               console.log(age);
+
+               const today = new Date();
+               console.log(today);
+
+               const anotherDate = new Date();
+               console.log(today.toDateString() === anotherDate.toDateString());
+
+               const pizza = {
+                base : "thin",
+                toppings : ["olives", "pineapple"]
+               }
+               pizza.size = '12"';
+               pizza.base = "thick"
+               console.log(pizza);
+               
+               //spread operator
+               const pizza2 = {...pizza, extraHot :true, size2 : pizza.size};
+               pizza.size = "no size"
+               console.log(pizza2);
+
+               const colours = ["red"]
+               //console.log(nameInput.value);
+            }
+       </script>
+    </head>
+    <body>
+        <h1>Javascript Challenge 1</h1>
+        <p>
+           <label for="name">Name</label>
+           <input id="name" type="text">
+        </p>
+        <p>
+            <label for="year">Year of birth</label>
+            <input id="year" type="number">
+         </p>
+         <p><button onclick="greetMe()">Greet me</button></p>
+         <div id="results"></div>
+    </body>
+</html>
