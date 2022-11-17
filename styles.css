@@ -17,11 +17,12 @@ h1 {
 
 .container {
     border: 1px solid #ccc;
+   /* width: 800px; */
     width: 500px;
     margin-left: auto;
     margin-right:auto;
 }
-
+/* if everything smaller than 600pixel */
 @media screen and (max-width: 600px) {
     .container {
         width: 90%;

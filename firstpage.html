@@ -13,15 +13,16 @@
         <link href="styles.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <div class="container">
         <h1>Customer form</h1>
-        <label onclick="hideList()">^</label><h2>Instructions</h2>
+        <h2 class="mini-heading">Instructions</h2>
         <ul name="list1">
             <li>Complete the fields</li>
             <li>Press the send button</li>
-            <li>It will cost you 50£</li>
+            <li>It will cost you &pound;50</li>
         </ul>
 
-        <h2>Customer information</h2>
+        <h2 class="mini-heading">Customer information</h2>
         <form action="https://some-server123.com/customer" method="get" >
                 <label for="job-title">Job title</label>
                 <select name="jt" required>
@@ -30,10 +31,19 @@
                     <option value="professional">professional</option>
                 </select>
                 <br>
-                <label for="custn" >Customer name</label>
-                <input type="text" name="custn" id="custn">
+                <label for="customer-name" >Customer name</label>
+                <input type="text" name="custn" id="customer-name">
                 <br>
+                <label>Choose your favourite colour</label>
+                <input type="color">
+                <br>
+                <label>Select your birthday</label>
+                <input type="date">
+                
+                <br>
+
                 <button type="submit">Send</button>
         </form> 
+        </div>
     </body>
 </html>
